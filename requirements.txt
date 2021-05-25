@@ -1,0 +1,6 @@
+streamlit
+
+# Static-analysis
+flake8
+black
+isort

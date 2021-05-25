@@ -1,25 +1,14 @@
-import streamlit as st
-import pandas as pd
+import os
 
+import pandas as pd
 import streamlit.components.v1 as components
 
-_custom_dataframe = components.declare_component(
-    "custom_dataframe", url="http://localhost:3001",
-)
+parent_dir = os.path.dirname(os.path.abspath(__file__))
+build_dir = os.path.join(parent_dir, "frontend/build")
+assert os.path.exists(build_dir)
+_component_func = components.declare_component("dataframe", path=build_dir)
 
 
-def custom_dataframe(data, key=None):
-    return _custom_dataframe(data=data, key=key, default=pd.DataFrame())
-
-
-raw_data = {
-    "First Name": ["Jason", "Molly", "Tina", "Jake", "Amy"],
-    "Last Name": ["Miller", "Jacobson", "Ali", "Milner", "Smith"],
-    "Age": [42, 52, 36, 24, 73],
-}
-
-df = pd.DataFrame(raw_data, columns=["First Name", "Last Name", "Age"])
-returned_df = custom_dataframe(df)
-
-if not returned_df.empty:
-    st.table(returned_df)
+def dataframe(data, key=None):
+    component_value = _component_func(data=data, key=key, default=pd.DataFrame())
+    return component_value
