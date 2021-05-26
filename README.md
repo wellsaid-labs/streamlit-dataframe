@@ -18,7 +18,7 @@ TODO
 3. Initialize the component frontend:
 
    ```bash
-   $ cd dataframe/frontend
+   $ cd datatable/frontend
    $ npm install    # Install npm dependencies
    ```
 

@@ -4,5 +4,5 @@ target-version = ['py38']
 
 [tool.isort]
 profile = 'black'
-src_paths = ['dataframe']
+src_paths = ['datatable']
 line_length = 100
