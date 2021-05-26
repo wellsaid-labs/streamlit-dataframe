@@ -1,6 +1,11 @@
 # Streamlit Datatable Component
 
-This repo contains a basic implementation of a Streamlit Datatable.
+This repo contains a basic implementation of a Streamlit Datatable using the
+[MUI Datatable](https://github.com/gregnb/mui-datatables) under the hood.
+
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/19170080/38026128-eac9d506-3258-11e8-92a7-b0d06e5faa82.gif" />
+</div>
 
 ## Installation
 
@@ -18,7 +23,7 @@ TODO
 3. Initialize the component frontend:
 
    ```bash
-   $ cd datatable/frontend
+   $ cd streamlit_datatable/frontend
    $ npm install    # Install npm dependencies
    ```
 
@@ -49,7 +54,7 @@ TODO
 1. Build the component frontend:
 
    ```bash
-   $ npm run build  # Start the Webpack dev server
+   $ npm run build
    ```
 
 ## More Information

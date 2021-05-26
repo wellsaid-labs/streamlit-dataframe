@@ -65,10 +65,10 @@ function Datatable(props: DatatableProps) {
       options={{
         selectableRows: 'none',
         rowHover: false,
-        customSearch: (searchQuery, currentRow, columns) => {
+        customSearch: (searchQuery: string, currentRow: any[]) => {
           let isFound = false
           currentRow.forEach(col => {
-            const content = col == Html ? col.props.text : col.toString()
+            const content = col === Html ? col.props.text : col.toString()
             if (content.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0) {
               isFound = true
             }

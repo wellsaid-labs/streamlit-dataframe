@@ -1,11 +1,9 @@
 {
-  "name": "datatable",
+  "name": "streamlit_datatable",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.9.12",
-    "@material-ui/data-grid": "^4.0.0-alpha.29",
-    "@material-ui/icons": "^4.9.1",
+    "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.4",
     "apache-arrow": "^0.17.0",
     "chroma-js": "^2.1.2",
