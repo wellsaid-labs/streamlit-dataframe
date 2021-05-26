@@ -9,6 +9,6 @@ assert os.path.exists(build_dir)
 _component_func = components.declare_component("dataframe", path=build_dir)
 
 
-def dataframe(data, key=None):
-    component_value = _component_func(data=data, key=key, default=pd.DataFrame())
+def dataframe(data, title: str = "", key=None):
+    component_value = _component_func(data=data, title=title, key=key, default=pd.DataFrame())
     return component_value

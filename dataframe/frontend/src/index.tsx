@@ -1,10 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import CustomDataframe from "./CustomDataframe"
+import Dataframe from "./Dataframe"
 
 ReactDOM.render(
   <React.StrictMode>
-    <CustomDataframe />
+    <Dataframe />
   </React.StrictMode>,
   document.getElementById("root")
 )
