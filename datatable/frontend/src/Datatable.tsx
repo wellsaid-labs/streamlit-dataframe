@@ -20,13 +20,13 @@ function Html(props: HtmlProps) {
   return <span dangerouslySetInnerHTML={{ __html: props.text }} />
 }
 
-interface DataframeProps {
+interface DatatableProps {
   data: ArrowTable
   title: string
 }
 
 
-function getRows(props: DataframeProps) {
+function getRows(props: DatatableProps) {
   const rows = []
   for (let i = props.data.headerRows; i < props.data.rows; i++) {
     const row = []
@@ -43,7 +43,7 @@ function getRows(props: DataframeProps) {
   return rows
 }
 
-function getColumns(props: DataframeProps) {
+function getColumns(props: DatatableProps) {
   const columns = []
   for (let j = 1; j < props.data.columns; j++) {
     columns.push(props.data.getCell(0, j).content.toString())
@@ -52,7 +52,7 @@ function getColumns(props: DataframeProps) {
 }
 
 
-function Dataframe(props: DataframeProps) {
+function Datatable(props: DatatableProps) {
   if (props.data.headerRows !== 1) {
     throw new Error("Expecting 1 header row.")
   }
@@ -92,7 +92,7 @@ export default withStreamlitConnection((props) => {
 
   return (
     <ThemeProvider theme={props.theme}>
-      <Dataframe title={props.args.title} data={props.args.data} />
+      <Datatable title={props.args.title} data={props.args.data} />
     </ThemeProvider>
   )
 })

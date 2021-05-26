@@ -1,10 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import Dataframe from "./Dataframe"
+import Datatable from "./Datatable"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Dataframe />
+    <Datatable />
   </React.StrictMode>,
   document.getElementById("root")
 )

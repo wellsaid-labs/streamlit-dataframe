@@ -1,6 +1,6 @@
-# Streamlit Dataframe Component
+# Streamlit Datatable Component
 
-This repo contains a basic implementation of a Streamlit Dataframe.
+This repo contains a basic implementation of a Streamlit Datatable.
 
 ## Installation
 

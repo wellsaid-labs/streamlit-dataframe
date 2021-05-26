@@ -32,4 +32,4 @@ if __name__ == "__main__":
         * 5,
     }
     df = pd.DataFrame(raw_data, columns=list(raw_data.keys()))
-    datatable(df, title="Test DataFrame")
+    datatable(df, title="Test Datatable")

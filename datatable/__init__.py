@@ -9,6 +9,6 @@ assert os.path.exists(build_dir)
 _component_func = components.declare_component("datatable", path=build_dir)
 
 
-def datatable(data, title: str = "", key=None):
+def st_datatable(data, title: str = "", key=None):
     component_value = _component_func(data=data, title=title, key=key, default=pd.DataFrame())
     return component_value

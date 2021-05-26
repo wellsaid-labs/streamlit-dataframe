@@ -1,11 +1,11 @@
 import setuptools
 
 setuptools.setup(
-    name="streamlit-custom-component",
+    name="streamlit-mui-datatable",
     version="0.0.1",
-    author="",
-    author_email="",
-    description="",
+    author="Michael Petrochuk",
+    author_email="michael@wellsaidlabs.com",
+    description="A streamlit component wrapper over a Material-UI Datatable.",
     long_description="",
     long_description_content_type="text/plain",
     url="",
