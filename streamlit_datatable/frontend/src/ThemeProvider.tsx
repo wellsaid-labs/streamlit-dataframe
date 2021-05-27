@@ -35,6 +35,7 @@ export const ThemeProvider: React.VFC<
           active: stTheme.textColor,
           hover: textColorScale(0.5).hex(),
           selected: stTheme.primaryColor,
+          disabled: textColorScale(0.5).hex(),
         },
         background: {
           default: stTheme.backgroundColor,
