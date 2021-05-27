@@ -30,7 +30,8 @@ function getRows(props: DatatableProps) {
   for (let i = props.data.headerRows; i < props.data.rows; i++) {
     const row = []
     for (let j = 1; j < props.data.columns; j++) {
-      const content = props.data.getCell(i, j).content.toString()
+      let content = props.data.getCell(i, j).content
+      content = content === null ? "" : content.toString()
       if (content[0] === "<" && content[content.length - 1] === ">") {
         row.push(<Html text={content}></Html>)
       } else {
@@ -45,7 +46,9 @@ function getRows(props: DatatableProps) {
 function getColumns(props: DatatableProps) {
   const columns = []
   for (let j = 1; j < props.data.columns; j++) {
-    columns.push(props.data.getCell(0, j).content.toString())
+    let content = props.data.getCell(0, j).content
+    content = content === null ? "" : content.toString()
+    columns.push(content)
   }
   return columns
 }
