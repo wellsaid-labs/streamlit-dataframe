@@ -1,8 +1,7 @@
 import MUIDataTable from "mui-datatables"
-import React, { useEffect } from "react"
+import React from "react"
 import {
   ArrowTable,
-  Streamlit,
   withStreamlitConnection
 } from "streamlit-component-lib"
 import ThemeProvider from "./ThemeProvider"
@@ -82,10 +81,6 @@ function Datatable(props: DatatableProps) {
 
 
 export default withStreamlitConnection((props) => {
-  useEffect(() => {
-    Streamlit.setFrameHeight()
-  })
-
   if (!props.theme) {
     throw new Error("Expecting theme to be defined.")
   }

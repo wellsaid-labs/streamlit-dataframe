@@ -5,9 +5,12 @@ import {
 } from "streamlit-component-lib";
 import Datatable from "./Datatable";
 
-window.addEventListener('load', () => {
-  Streamlit.setFrameHeight();
-});
+// @ts-ignore
+const resizeObserver = new ResizeObserver(() => {
+  Streamlit.setFrameHeight()
+})
+
+resizeObserver.observe(document.body)
 
 ReactDOM.render(
   <React.StrictMode>

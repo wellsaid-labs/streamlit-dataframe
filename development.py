@@ -30,12 +30,13 @@ if __name__ == "__main__":
     st.title("Streamlit Datatable")
     st.write("This streamlit app is used for testing the `st_datatable` component.")
     use_built = st.checkbox("Use Built Component")
+    num_rows = st.number_input("Number of Rows", value=25, min_value=0)
     st_datatable = make_datatable_component(use_built)
-    num_rows = 5
+
     data = {
-        "First Name": ["Jason", "Molly", "Tina", "Jake", "Amy"],
-        "Last Name": ["Miller", "Jacobson", "Ali", "Milner", "Smith"],
-        "Age": [42, 52, 36, 24, 73],
+        "First Name": (["Jason", "Molly", "Tina", "Jake", "Amy"] * num_rows)[:num_rows],
+        "Last Name": (["Miller", "Jacobson", "Ali", "Milner", "Smith"] * num_rows)[:num_rows],
+        "Age": ([42, 52, 36, 24, 73] * num_rows)[:num_rows],
         "Long Text": [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
             "Aliquam molestie, neque sit amet eleifend rhoncus, justo "
