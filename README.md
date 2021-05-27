@@ -9,7 +9,19 @@ This repo contains a basic implementation of a Streamlit Datatable using the
 
 ## Installation
 
-TODO
+```bash
+python -m pip install git+https://github.com/wellsaid-labs/streamlit-mui-datatable.git
+```
+
+## Usage
+
+```python
+from streamlit_datatable import st_datatable
+import pandas as pd
+
+df = pd.DataFrame({'col1': [1, 2], 'col2': [3, 4]})
+st_datatable(df, title="You got this!")
+```
 
 ## Contributing
 
