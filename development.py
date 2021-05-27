@@ -36,7 +36,9 @@ if __name__ == "__main__":
     data = {
         "First Name": (["Jason", "Molly", "Tina", "Jake", "Amy"] * num_rows)[:num_rows],
         "Last Name": (["Miller", "Jacobson", "Ali", "Milner", "Smith"] * num_rows)[:num_rows],
-        "Age": ([42, 52, 36, 24, 73] * num_rows)[:num_rows],
+        "Age": ([9, 52, 36, 24, 73] * num_rows)[:num_rows],
+        "Middle Name Initial": (["B", None, "J", None, None] * num_rows)[:num_rows],
+        "Float": [random.random() for _ in range(num_rows)],
         "Long Text": [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
             "Aliquam molestie, neque sit amet eleifend rhoncus, justo "

@@ -30,9 +30,19 @@ function getRows(props: DatatableProps) {
   for (let i = props.data.headerRows; i < props.data.rows; i++) {
     const row = []
     for (let j = 1; j < props.data.columns; j++) {
-      let content = props.data.getCell(i, j).content
-      content = content === null ? "" : content.toString()
-      if (content[0] === "<" && content[content.length - 1] === ">") {
+      let content: any = props.data.getCell(i, j).content
+      if (content === null) {
+        content = ""
+      } else if (content instanceof Int32Array) {
+        // NOTE: For some reason, integers are stored in a Int32Array.
+        content = content[0]
+      } else if (typeof content !== 'number') {
+        // TODO: Ensure CSV export can handle numbers.
+        content = content.toString()
+      }
+      if (typeof content === 'string' &&
+        content[0] === "<" &&
+        content[content.length - 1] === ">") {
         row.push(<Html text={content}></Html>)
       } else {
         row.push(content)
