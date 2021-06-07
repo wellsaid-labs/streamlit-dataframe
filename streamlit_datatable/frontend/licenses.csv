@@ -1,0 +1,8 @@
+"module name","license","repository"
+"axe-core@4.2.1","MPL-2.0","https://github.com/dequelabs/axe-core"
+"caniuse-lite@1.0.30001230","CC-BY-4.0","https://github.com/browserslist/caniuse-lite"
+"language-subtag-registry@0.3.21","ODC-By-1.0","https://github.com/mattcg/language-subtag-registry"
+"pako@1.0.11","(MIT AND Zlib)","https://github.com/nodeca/pako"
+"spdx-exceptions@2.3.0","CC-BY-3.0","https://github.com/kemitchell/spdx-exceptions.json"
+"spdx-ranges@2.1.1","(MIT AND CC-BY-3.0)","https://github.com/kemitchell/spdx-ranges.js"
+"text-encoding-utf-8@1.0.2","Public Domain","https://github.com/arv/text-encoding-utf-8"

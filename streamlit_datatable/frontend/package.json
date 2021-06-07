@@ -7,6 +7,7 @@
     "@material-ui/styles": "^4.11.4",
     "apache-arrow": "^0.17.0",
     "chroma-js": "^2.1.2",
+    "license-checker": "^25.0.1",
     "lodash": "^4.17.15",
     "mui-datatables": "^3.7.7",
     "react": "^16.13.1",
@@ -18,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "update_licenses": "license-checker --csv --direct --excludePrivatePackages --exclude 'MIT, Apache-2.0, BSD, ISC, Unlicense, CC0-1.0' --out licenses.csv"
   },
   "eslintConfig": {
     "extends": "react-app"
